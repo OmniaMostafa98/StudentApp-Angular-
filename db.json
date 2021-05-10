@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Omnia Mostafa",
+      "email": "omnia@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Sara Ahmed",
+      "email": "ahmed@gmail.com"
+    },
+    {
+      "name": "ayman",
+      "email": "egyptayman@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Hala",
+      "email": "hala1998@yahoo.com",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<div style="background-color: rgb(170, 230, 230); height: 100vh;">
+    <div >
+       <h1 style="text-align: center;">Students</h1>
+       <!-- Button trigger modal -->
+<div class="d-flex justify-content-center">
+<button  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  Add Student
+</button>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Student</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" ngModel>
+            
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+        <br>
+       <table class="table table-striped">
+        <thead>
+          <tr >
+            
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">View Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of students">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item .email}}</td>
+            <a class="nav-link" [routerLink]="['/userDetails', item.id]" class="btn btn-light  active" role="button" >View</a>
+           
+          </tr>
+         
+        </tbody>
+      </table>
+     
+
+    </div>
+
+</div>
